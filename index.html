@@ -3,26 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Romarias Padre Mazinho - Bom Jesus da Lapa</title>
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-    <!-- Font Awesome para ícones -->
+    <title>Inscrições - Romarias Padre Mazinho</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
     <style>
         :root {
-            --laranja: #f07151; /* Cor extraída da sua imagem */
-            --azul: #007bff;
-            --branco: #ffffff;
-            --escuro: #333;
+            --laranja: #f07151; /* Cor da sua imagem */
+            --azul-claro: #e7f3ff;
+            --azul-icon: #1877f2;
+            --texto: #333;
         }
 
         body {
             font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
-            color: var(--escuro);
+            background-color: #fdf2ef; /* Fundo levemente alaranjado */
+            color: var(--texto);
         }
 
         header {
@@ -30,111 +28,151 @@
             padding: 40px 20px;
             text-align: center;
             color: white;
-            border-bottom: 5px solid #d85d3f;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .profile-container {
+            position: relative;
+            display: inline-block;
         }
 
         .profile-img {
-            width: 150px;
-            height: 150px;
+            width: 130px;
+            height: 130px;
             border-radius: 50%;
-            border: 5px solid white;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-            margin-bottom: 15px;
+            border: 4px solid white;
+            background-color: #eee;
         }
 
         .container {
-            max-width: 800px;
-            margin: -30px auto 40px;
+            max-width: 600px;
+            margin: -40px auto 40px;
             background: white;
             padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-            text-align: center;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
         }
 
-        h1 { margin: 10px 0; font-size: 1.8rem; }
-        .slogan { font-style: italic; color: #666; margin-bottom: 20px; }
+        h2 { color: var(--laranja); text-align: center; margin-top: 0; }
+        .slogan { text-align: center; font-style: italic; color: #666; margin-bottom: 25px; }
 
-        .btn-whatsapp {
-            background-color: #25d366;
+        /* Formulário */
+        .form-group { margin-bottom: 15px; text-align: left; }
+        label { display: block; margin-bottom: 5px; font-weight: 600; font-size: 0.9rem; }
+        input, select, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-sizing: border-box;
+            font-family: inherit;
+        }
+
+        button.btn-enviar {
+            width: 100%;
+            background-color: var(--laranja);
             color: white;
-            padding: 15px 30px;
-            text-decoration: none;
-            border-radius: 50px;
+            border: none;
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 1rem;
             font-weight: bold;
-            display: inline-block;
-            margin: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+            margin-top: 10px;
+        }
+
+        button.btn-enviar:hover { background-color: #d85d3f; }
+
+        /* Botões de Contato */
+        .contatos { text-align: center; margin-top: 30px; }
+        
+        .btn-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            padding: 12px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            font-weight: 600;
             transition: 0.3s;
         }
 
-        .btn-instagram {
-            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-            color: white;
-            padding: 15px 30px;
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: bold;
-            display: inline-block;
-            margin: 10px;
-        }
+        .whatsapp { background-color: #25d366; color: white; }
+        .instagram { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); color: white; }
+        
+        .btn-link i { margin-right: 10px; font-size: 1.2rem; }
 
-        .info-section {
-            text-align: left;
-            margin-top: 30px;
-            padding-top: 20px;
-            border-top: 1px solid #eee;
-        }
-
-        .card-destino {
-            background-color: #fff4f1;
-            padding: 20px;
-            border-left: 5px solid var(--laranja);
-            margin-bottom: 20px;
-            border-radius: 5px;
-        }
-
-        footer {
-            text-align: center;
-            padding: 20px;
-            font-size: 0.9rem;
-            color: #888;
-        }
+        footer { text-align: center; padding: 20px; font-size: 0.8rem; color: #999; }
     </style>
 </head>
 <body>
 
 <header>
-    <!-- Substitua pelo link da sua foto se preferir -->
-    <img src="perfil.jpg" alt="Padre Mazinho" class="profile-img">
-    <h1>Romarias do Padre Mazinho</h1>
-    <p>@romarias.padremazinho</p>
+    <div class="profile-container">
+        <!-- Certifique-se de subir a imagem com o nome perfil.jpg -->
+        <img src="perfil.jpg" alt="Padre Mazinho" class="profile-img">
+    </div>
+    <h1>Romarias Padre Mazinho</h1>
 </header>
 
 <div class="container">
     <p class="slogan">"Fé que une, caminhada que transforma."</p>
     
-    <div class="card-destino">
-        <h3>🙏 Destino: Bom Jesus da Lapa</h3>
-        <p>Participe de nossa próxima romaria! Levamos você com conforto, segurança e toda a espiritualidade que este momento pede.</p>
-        <p><strong>Garanta sua vaga conosco!</strong></p>
-    </div>
+    <h2>Ficha de Inscrição</h2>
+    <!-- O action abaixo usa o Formspree. Para ativar, basta colocar seu e-mail no site formspree.io -->
+    <form action="https://formspree.io/f/seu-codigo-aqui" method="POST">
+        
+        <div class="form-group">
+            <label>Nome Completo:</label>
+            <input type="text" name="nome" placeholder="Seu nome completo" required>
+        </div>
 
-    <a href="https://wa.me/38999648992" class="btn-whatsapp" target="_blank">
-        <i class="fab fa-whatsapp"></i> Falar no WhatsApp
-    </a>
+        <div class="form-group">
+            <label>WhatsApp:</label>
+            <input type="tel" name="whatsapp" placeholder="(00) 00000-0000" required>
+        </div>
 
-    <a href="https://instagram.com/romarias.padremazinho" class="btn-instagram" target="_blank">
-        <i class="fab fa-instagram"></i> Seguir no Instagram
-    </a>
+        <div class="form-group">
+            <label>Cidade/Estado:</label>
+            <input type="text" name="cidade" placeholder="Onde você mora?" required>
+        </div>
 
-    <div class="info-section">
-        <h3>Sobre as Romarias</h3>
-        <p>Nossas viagens para Bom Jesus da Lapa são pensadas para proporcionar uma experiência profunda de fé e renovação. Organizamos todo o transporte e suporte durante a estadia.</p>
+        <div class="form-group">
+            <label>Quantas pessoas?</label>
+            <select name="vagas">
+                <option value="1">Apenas eu</option>
+                <option value="2">2 pessoas</option>
+                <option value="3">3 pessoas</option>
+                <option value="4+">4 ou mais pessoas</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Mensagem ou Dúvida (opcional):</label>
+            <textarea name="mensagem" rows="3"></textarea>
+        </div>
+
+        <button type="submit" class="btn-enviar">ENVIAR INSCRIÇÃO</button>
+    </form>
+
+    <div class="contatos">
+        <p>Ou fale diretamente conosco:</p>
+        
+        <a href="https://wa.me/5538999648992" class="btn-link whatsapp" target="_blank">
+            <i class="fab fa-whatsapp"></i> Chamar no WhatsApp
+        </a>
+
+        <a href="https://instagram.com/romarias.padremazinho" class="btn-link instagram" target="_blank">
+            <i class="fab fa-instagram"></i> Ver fotos no Instagram
+        </a>
     </div>
 </div>
 
 <footer>
-    &copy; 2023 Romarias Padre Mazinho. Todos os direitos reservados.
+    Bom Jesus da Lapa - Bahia<br>
+    &copy; 2024 Romarias Padre Mazinho
 </footer>
 
 </body>
