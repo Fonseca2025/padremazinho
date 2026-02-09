@@ -1,49 +1,141 @@
-
 <!DOCTYPE html>
-<html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Romarias Padre Mazinho - Bom Jesus da Lapa</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
     <style>
-      body {
-        font-family: 'Montserrat', sans-serif;
-        scroll-behavior: smooth;
-      }
-      .font-serif {
-        font-family: 'Playfair+Display', serif;
-      }
-      .bg-terracotta {
-        background-color: #E67E51;
-      }
-      .text-terracotta {
-        color: #E67E51;
-      }
-      .bg-social-blue {
-        background-color: #3b82f6;
-      }
-      .blob-shape {
-        border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-      }
+        :root {
+            --laranja: #f07151; /* Cor extraída da sua imagem */
+            --azul: #007bff;
+            --branco: #ffffff;
+            --escuro: #333;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: var(--escuro);
+        }
+
+        header {
+            background-color: var(--laranja);
+            padding: 40px 20px;
+            text-align: center;
+            color: white;
+            border-bottom: 5px solid #d85d3f;
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 5px solid white;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            margin-bottom: 15px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: -30px auto 40px;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        h1 { margin: 10px 0; font-size: 1.8rem; }
+        .slogan { font-style: italic; color: #666; margin-bottom: 20px; }
+
+        .btn-whatsapp {
+            background-color: #25d366;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            display: inline-block;
+            margin: 10px;
+            transition: 0.3s;
+        }
+
+        .btn-instagram {
+            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            display: inline-block;
+            margin: 10px;
+        }
+
+        .info-section {
+            text-align: left;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+
+        .card-destino {
+            background-color: #fff4f1;
+            padding: 20px;
+            border-left: 5px solid var(--laranja);
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9rem;
+            color: #888;
+        }
     </style>
-  <script type="importmap">
-{
-  "imports": {
-    "lucide-react": "https://esm.sh/lucide-react@^0.563.0",
-    "react/": "https://esm.sh/react@^19.2.4/",
-    "react": "https://esm.sh/react@^19.2.4",
-    "react-dom/": "https://esm.sh/react-dom@^19.2.4/"
-  }
-}
-</script>
-<link rel="stylesheet" href="/index.css">
 </head>
-  <body class="bg-gray-50 text-gray-800">
-    <div id="root"></div>
-  <script type="module" src="/index.tsx"></script>
+<body>
+
+<header>
+    <!-- Substitua pelo link da sua foto se preferir -->
+    <img src="perfil.jpg" alt="Padre Mazinho" class="profile-img">
+    <h1>Romarias do Padre Mazinho</h1>
+    <p>@romarias.padremazinho</p>
+</header>
+
+<div class="container">
+    <p class="slogan">"Fé que une, caminhada que transforma."</p>
+    
+    <div class="card-destino">
+        <h3>🙏 Destino: Bom Jesus da Lapa</h3>
+        <p>Participe de nossa próxima romaria! Levamos você com conforto, segurança e toda a espiritualidade que este momento pede.</p>
+        <p><strong>Garanta sua vaga conosco!</strong></p>
+    </div>
+
+    <a href="https://wa.me/SEUNUMEROAQUI" class="btn-whatsapp" target="_blank">
+        <i class="fab fa-whatsapp"></i> Falar no WhatsApp
+    </a>
+
+    <a href="https://instagram.com/romarias.padremazinho" class="btn-instagram" target="_blank">
+        <i class="fab fa-instagram"></i> Seguir no Instagram
+    </a>
+
+    <div class="info-section">
+        <h3>Sobre as Romarias</h3>
+        <p>Nossas viagens para Bom Jesus da Lapa são pensadas para proporcionar uma experiência profunda de fé e renovação. Organizamos todo o transporte e suporte durante a estadia.</p>
+    </div>
+</div>
+
+<footer>
+    &copy; 2023 Romarias Padre Mazinho. Todos os direitos reservados.
+</footer>
+
 </body>
 </html>
